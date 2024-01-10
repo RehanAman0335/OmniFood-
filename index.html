@@ -454,20 +454,30 @@
             <p class="cta-text">Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You
               can cancel or pause anytime. And the first meal is on us!</p>
 
-            <form class="cta-form" action="#">
+              <!-- remove the action="#" from class and add attribute name="sign-up" and netlify attribute netlify is not a 
+               html attribute we add this because when we upload the file on netlify so it see and added it for this form -->
+            <form class="cta-form"
+            name="sign-up" netlify>
               <div>
                 <label for="full-name">Full Name</label>
-                <input type="text" placeholder="John Smith" required />
+                <input type="text"
+                 placeholder="John Smith"
+                name="full-name"
+                required />
               </div>
 
               <div>
                 <label for="email">Email Address</label>
-                <input id="email" type="email" placeholder="me@example.com" required />
+                <input id="email" type="email" 
+                placeholder="me@example.com" 
+                name="email"
+                required />
               </div>
 
               <div>
                 <label for="select-where"> Where did you here from us</label>
-                <select id="select-where" required>
+                <select id="select-where" 
+                name="select-where" required>
                   <option value="">Please Choose option:</option>
                   <option value="Friends">Friends and Family</option>
                   <option value="Youtube">Youtube video</option>
